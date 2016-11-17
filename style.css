@@ -1,1 +1,62 @@
+/* Reset */
+html, body, nav, main, img, aside, header, footer, div, h1, h2, a, p, table, tr, th, td, hr{ padding: 0; margin: 0; box-sizing: border-box; }
+
+/*******************/
+
+
+html{ background: #333333 url(background.png) repeat; font-family: basefont, verdana, sans-serif; }
+
+body{ 
+	font-size: 1.4em; 
+}
+
+nav{ 
+	background-color: #E0FFFF; 
+	border-bottom: 1px solid #111144;
+	color: white;
+	margin: -7px 0 0 0;
+	text-align: center;
+}
+	nav a{
+		display: block;
+		border-bottom: 1px solid #333333;
+		text-align: center;
+		color: #111144;
+		font-size: 1.5em;
+		font-family: neon, verdana, sans-serif;
+	}
+	nav a:hover{
+		background-color: #2F8484;
+		color: white;
+		cursor: pointer;
+	}
+
+
+main{  
+	box-shadow: 0 10px 20px black, 0 10px 20px black;
+	background-color: #FFFFFF; 
+	padding: 20px;
+}
+
+h1{ font-family: stencil, verdana, sans-serif; margin: 0 0 25px; }
+p{ margin: 0 0 25px; }
+a{ text-decoration: none; }
+hr{ margin: 20px 0 30px; }	
+img{ max-width: 100%; margin: 0 auto; }
+.active{ background-color: #2F8484; color: white; }
+
+@media only all and (min-width: 1024px){
+	main{
+		margin: 0 auto;
+		max-width: 1024px;
+	}
+	
+	nav a{
+		display: inline-block;
+		border: none;
+		font-size: 1em;
+		padding: 10px 0;
+		width: 15%;
+	}
+	
 
