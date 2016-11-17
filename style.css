@@ -7,7 +7,8 @@ html, body, nav, main, img, aside, header, footer, div, h1, h2, a, p, table, tr,
 html{ background: #333333 url(background.png) repeat; font-family: basefont, verdana, sans-serif; }
 
 body{ 
-	font-size: 1.4em; 
+	font-size: 1.3em; 
+	box-shadow: 0 10px 20px black, 0 10px 20px rgba(0,0,0,0.5);
 }
 
 nav{ 
@@ -32,8 +33,7 @@ nav{
 	}
 
 
-main{  
-	box-shadow: 0 10px 20px black, 0 10px 20px black;
+main{ 
 	background-color: #FFFFFF; 
 	padding: 20px;
 }
@@ -42,11 +42,11 @@ h1{ font-family: stencil, verdana, sans-serif; margin: 0 0 25px; }
 p{ margin: 0 0 25px; }
 a{ text-decoration: none; }
 hr{ margin: 20px 0 30px; }	
-img{ max-width: 100%; margin: 0 auto; }
+img{ width: 100%; margin-bottom: 3px; }
 .active{ background-color: #2F8484; color: white; }
 
 @media only all and (min-width: 1024px){
-	main{
+	body{
 		margin: 0 auto;
 		max-width: 1024px;
 	}
