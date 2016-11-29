@@ -37,43 +37,35 @@
 			if ($enrolled == 1) {
 			
 			try {
-				$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    
-			// set the PDO error mode to exception
-				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-			// sql to delete a record
+				// sql to delete a record
 				$sql = "DELETE FROM user_task WHERE user_id= $user_id";
 
-			// use exec() because no results are returned
-				$conn->exec($sql);
+				// use exec() because no results are returned
+				$db->exec($sql);
 				echo "Sorry to see you go!";
 				}
-				catch(PDOException $e)
+			catch(PDOException $e)
 				{
 				echo $sql . "<br>" . $e->getMessage();
 				}
 
-			$conn = null;
+			$db = null;
 			
 			} else {
 			
 			try {
-				$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-			
-			// set the PDO error mode to exception
-				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				$sql = "INSERT INTO user_task (user_id, task_id)
 				VALUES ('$user_id', '$task_id')";
 			// use exec() because no results are returned
-				$conn->exec($sql);
+				$db->exec($sql);
 				echo "Thanks for signing up!";
 		}
 			catch(PDOException $e)
 		{
 			echo $sql . "<br>" . $e->getMessage();
 		}
-			$conn = null;
+			$db = null;
 
 		}
 			
